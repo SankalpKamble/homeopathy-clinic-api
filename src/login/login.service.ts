@@ -5,15 +5,16 @@ import { CreateLoginDto } from './dto/create-login.dto';
 export class LoginService {
   create(createLoginDto: CreateLoginDto) {
     console.log(createLoginDto);
+    return createLoginDto;
+  }
+
+  authenticate(createLoginDto: CreateLoginDto) {
+    console.log(createLoginDto);
     if (createLoginDto.username === 'admin' && createLoginDto.password === 'admin') {
       return { statusCode: HttpStatus.OK, message: 'Logged in Successfully' };
     } else {
       return { statusCode: HttpStatus.UNAUTHORIZED, message: 'Invalid Credentials' };
     }
-  }
-
-  findAll() {
-    return `This action returns all login`;
   }
 
   findOne(id: number) {

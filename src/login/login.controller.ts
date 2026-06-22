@@ -12,9 +12,9 @@ export class LoginController {
     return this.loginService.create(createLoginDto);
   }
 
-  @Get()
-  findAll() {
-    return this.loginService.findAll();
+  @Post('/login')
+  authenticate(@Body() createLoginDto: CreateLoginDto) {
+    return this.loginService.authenticate(createLoginDto);
   }
 
   @Get(':id')
