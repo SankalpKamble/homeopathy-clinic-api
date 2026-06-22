@@ -54,3 +54,4 @@ sudo apt install direnv
 # Then add to ~/.bashrc:
 echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 source ~/.bashrc
+
